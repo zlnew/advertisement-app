@@ -14,7 +14,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div style="background-color: white; border-bottom: 0.5px solid lightgray;">
+  <div style="background-color: white;">
     <n-space
       justify="space-between"
       align="center"

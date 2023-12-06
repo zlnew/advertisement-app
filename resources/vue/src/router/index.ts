@@ -35,7 +35,7 @@ const router = createRouter({
           path: 'password/forgot',
           name: 'forgotPassword',
           meta: {
-            title: 'Forgot password? - ADs App',
+            title: 'Forgot Password? - ADs App',
           },
           component: () => import('@/views/auth/ForgotPasswordView.vue')
         },
@@ -67,9 +67,9 @@ const router = createRouter({
 })
 
 router.beforeEach((to, _from, next) => {
-  const title = to.meta.title as string
+  const title = to.meta.title
 
-  if (title) {
+  if (title !== undefined && typeof title === 'string') {
     document.title = title
   }
 

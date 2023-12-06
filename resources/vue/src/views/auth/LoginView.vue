@@ -106,11 +106,11 @@ const loginHandler = (e: MouseEvent) => {
       </n-form-item>
 
       <n-space justify="space-between">
-        <RouterLink to="/auth/password/forgot">
+        <router-link to="/auth/password/forgot">
           <n-button>
             Forgot Password?
           </n-button>
-        </RouterLink>
+        </router-link>
 
         <n-button
           attr-type="submit"
@@ -125,10 +125,10 @@ const loginHandler = (e: MouseEvent) => {
   </n-card>
 
   <n-space justify="center" style="margin-top: 1rem;">
-    <RouterLink to="/auth/register">
+    <router-link to="/auth/register">
       <n-button quaternary>
         Don't have account? Register
       </n-button>
-    </RouterLink>
+    </router-link>
   </n-space>
 </template>

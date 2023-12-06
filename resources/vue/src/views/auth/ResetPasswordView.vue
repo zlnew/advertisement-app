@@ -80,7 +80,7 @@ function validatePasswordSame (_rule: FormItemRule, value: string): boolean {
 </script>
 
 <template>
-  <n-card title="Reset password" style="width: 350px">
+  <n-card title="Reset Password" style="width: 350px">
     <n-alert
       v-if="formValidationErrors"
       title="Reset Password Error"
@@ -133,10 +133,10 @@ function validatePasswordSame (_rule: FormItemRule, value: string): boolean {
   </n-card>
 
   <n-space justify="center" style="margin-top: 1rem;">
-    <RouterLink to="/auth/login">
+    <router-link to="/auth/login">
       <n-button quaternary>
         Back to login page
       </n-button>
-    </RouterLink>
+    </router-link>
   </n-space>
 </template>

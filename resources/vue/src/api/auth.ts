@@ -60,11 +60,9 @@ async function register(data: RegisterData) {
   }
 }
 
-async function logout(accessToken: string) {
+async function logout() {
   try {
-    const response = await axios.post('logout', null, {
-      headers: { 'Authorization': `Bearer ${accessToken}` }
-    })
+    const response = await api.post('logout', null)
     return response.data
   } catch (error: any) {
     if (axios.isAxiosError(error)) {

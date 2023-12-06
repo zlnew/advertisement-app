@@ -4,7 +4,8 @@ import { logout } from '@/api/auth'
 import {
   NDropdown,
   NButton,
-  type DropdownOption
+  useMessage,
+  type DropdownOption,
 } from 'naive-ui'
 
 interface User {
@@ -12,6 +13,8 @@ interface User {
   name: string
   email: string
 }
+
+const message = useMessage()
 
 const options: DropdownOption[] = [{
   label: 'Logout',
@@ -21,13 +24,14 @@ const options: DropdownOption[] = [{
 const userData = ref<User>()
 
 const logoutHandler = () => {
-  const accessToken = localStorage.getItem('access_token')
-
-  logout(accessToken && JSON.parse(accessToken))
+  logout()
     .then(() => {
       localStorage.removeItem('access_token')
       localStorage.removeItem('user')
       window.location.reload()
+    })
+    .catch((error) => {
+      message.error(error.message)
     })
 }
 

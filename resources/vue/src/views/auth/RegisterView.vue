@@ -153,10 +153,10 @@ const registerHandler = (e: MouseEvent) => {
   </n-card>
 
   <n-space justify="center" style="margin-top: 1rem;">
-    <RouterLink to="/auth/login">
+    <router-link to="/auth/login">
       <n-button quaternary>
         Already have an account? Login
       </n-button>
-    </RouterLink>
+    </router-link>
   </n-space>
 </template>

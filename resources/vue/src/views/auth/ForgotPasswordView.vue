@@ -55,7 +55,7 @@ const forgotPasswordHandler = (e: MouseEvent) => {
 </script>
 
 <template>
-  <n-card title="Forgot Password" style="width: 350px;">
+  <n-card title="Forgot Password?" style="width: 350px;">
     <n-alert
       v-if="successMessage"
       title="Link sent successfully"
@@ -111,10 +111,10 @@ const forgotPasswordHandler = (e: MouseEvent) => {
   </n-card>
 
   <n-space justify="center" style="margin-top: 1rem;">
-    <RouterLink to="/auth/login">
+    <router-link to="/auth/login">
       <n-button quaternary>
         Back to login page
       </n-button>
-    </RouterLink>
+    </router-link>
   </n-space>
 </template>
